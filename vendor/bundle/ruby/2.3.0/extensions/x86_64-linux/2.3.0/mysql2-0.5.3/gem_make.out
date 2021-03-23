@@ -1,0 +1,60 @@
+current directory: /home/nick/my/depot/vendor/bundle/ruby/2.3.0/gems/mysql2-0.5.3/ext/mysql2
+/home/nick/.rvm/rubies/ruby-2.3.1/bin/ruby -I /home/nick/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0 -r ./siteconf20210322-1112481-1o6slsx.rb extconf.rb
+checking for rb_absint_size()... yes
+checking for rb_absint_singlebit_p()... yes
+checking for rb_wait_for_single_fd()... yes
+-----
+Using mysql_config at /usr/bin/mysql_config
+-----
+checking for mysql.h... yes
+checking for errmsg.h... yes
+checking for SSL_MODE_DISABLED in mysql.h... yes
+checking for SSL_MODE_PREFERRED in mysql.h... yes
+checking for SSL_MODE_REQUIRED in mysql.h... yes
+checking for SSL_MODE_VERIFY_CA in mysql.h... yes
+checking for SSL_MODE_VERIFY_IDENTITY in mysql.h... yes
+checking for MYSQL.net.vio in mysql.h... yes
+checking for MYSQL.net.pvio in mysql.h... no
+checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... yes
+checking for SERVER_QUERY_NO_GOOD_INDEX_USED in mysql.h... yes
+checking for SERVER_QUERY_NO_INDEX_USED in mysql.h... yes
+checking for SERVER_QUERY_WAS_SLOW in mysql.h... yes
+checking for MYSQL_OPTION_MULTI_STATEMENTS_ON in mysql.h... yes
+checking for MYSQL_OPTION_MULTI_STATEMENTS_OFF in mysql.h... yes
+checking for my_bool in mysql.h... no
+-----
+Setting libpath to /usr/lib/x86_64-linux-gnu
+-----
+creating Makefile
+
+current directory: /home/nick/my/depot/vendor/bundle/ruby/2.3.0/gems/mysql2-0.5.3/ext/mysql2
+make "DESTDIR=" clean
+
+current directory: /home/nick/my/depot/vendor/bundle/ruby/2.3.0/gems/mysql2-0.5.3/ext/mysql2
+make "DESTDIR="
+compiling statement.c
+compiling mysql2_ext.c
+compiling result.c
+result.c: In function ‘rb_mysql_result_fetch_row’:
+result.c:536:14: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  536 |           if (args->castBool && fields[i].length == 1) {
+      |              ^
+result.c:540:9: note: here
+  540 |         case MYSQL_TYPE_SHORT:      /* SMALLINT field */
+      |         ^~~~
+result.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-used-but-marked-unused’
+cc1: warning: unrecognized command line option ‘-Wno-static-in-inline’
+cc1: warning: unrecognized command line option ‘-Wno-reserved-id-macro’
+cc1: warning: unrecognized command line option ‘-Wno-missing-variable-declarations’
+cc1: warning: unrecognized command line option ‘-Wno-documentation-unknown-command’
+cc1: warning: unrecognized command line option ‘-Wno-disabled-macro-expansion’
+cc1: warning: unrecognized command line option ‘-Wno-covered-switch-default’
+cc1: warning: unrecognized command line option ‘-Wno-conditional-uninitialized’
+compiling infile.c
+compiling client.c
+linking shared-object mysql2/mysql2.so
+
+current directory: /home/nick/my/depot/vendor/bundle/ruby/2.3.0/gems/mysql2-0.5.3/ext/mysql2
+make "DESTDIR=" install
+/usr/bin/install -m 0755 mysql2.so ./.gem.20210322-1112481-imemzt/mysql2

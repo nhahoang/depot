@@ -1,0 +1,5 @@
+{
+  "editor.tabSize": 2,
+  "ruby.format": false,
+  "ruby.intellisense": "rubyLocate"
+}

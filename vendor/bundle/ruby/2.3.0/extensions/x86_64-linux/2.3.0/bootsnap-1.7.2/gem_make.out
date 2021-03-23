@@ -1,0 +1,30 @@
+current directory: /home/nick/my/depot/vendor/bundle/ruby/2.3.0/gems/bootsnap-1.7.2/ext/bootsnap
+/home/nick/.rvm/rubies/ruby-2.3.1/bin/ruby -I /home/nick/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0 -r ./siteconf20210322-1112481-hafg24.rb extconf.rb
+creating Makefile
+
+current directory: /home/nick/my/depot/vendor/bundle/ruby/2.3.0/gems/bootsnap-1.7.2/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/nick/my/depot/vendor/bundle/ruby/2.3.0/gems/bootsnap-1.7.2/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: In function ‘bs_rb_fetch’:
+bootsnap.c:355:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  355 |   char * cachedir = RSTRING_PTR(cachedir_v);
+      |   ^~~~
+bootsnap.c: In function ‘bs_rb_precompile’:
+bootsnap.c:382:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  382 |   char * cachedir = RSTRING_PTR(cachedir_v);
+      |   ^~~~
+bootsnap.c: In function ‘bs_rb_fetch’:
+bootsnap.c:743:13: warning: ‘output_data’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  743 |     else if (!NIL_P(output_data)) goto succeed; /* fast-path, goal */
+      |             ^
+bootsnap.c:706:9: note: ‘output_data’ was declared here
+  706 |   VALUE output_data;  /* return data, e.g. ruby hash or loaded iseq */
+      |         ^~~~~~~~~~~
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/nick/my/depot/vendor/bundle/ruby/2.3.0/gems/bootsnap-1.7.2/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20210322-1112481-fvs7z/bootsnap
