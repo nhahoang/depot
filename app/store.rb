@@ -1,17 +1,17 @@
 require 'builder'
 require 'active_record'
 
-ActiveRecord::Base.establish_connection({
-  adapter: 'mysql2',
-  database: 'depot',
-  host: '127.0.0.1',
-  username: 'root',
-  password: "12345678",
-  port: 3306 }
-)
+# ActiveRecord::Base.establish_connection({
+#   adapter: 'mysql2',
+#   database: 'depot',
+#   host: '127.0.0.1',
+#   username: 'root',
+#   password: "12345678",
+#   port: 3306 }
+# )
 
-class Product < ActiveRecord::Base
-end
+# class Product < ActiveRecord::Base
+# end
 
 class StoreApp
   def call(env)
