@@ -39,13 +39,9 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'listen', '>= 3.0.5', '< 3.2'
-gem 'capistrano-rails'
-gem 'capistrano-rvm'
-gem 'capistrano-bundler'
-gem 'capistrano-passenger'
-gem 'net-ssh'
-gem 'ed25519', '>= 1.2', '< 2.0'
-gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
+gem 'activemerchant', '~> 1.58'
+gem 'haml-rails'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -68,6 +64,16 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+end
+
+group :production do
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger'
+  gem 'net-ssh'
+  gem 'ed25519', '>= 1.2', '< 2.0'
+  gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

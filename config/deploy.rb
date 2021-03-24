@@ -2,16 +2,14 @@
 lock "~> 3.16.0"
 
 set :application, "depot"
-#set :repo_url, "git@example.com:me/my_repo.git"
 user = 'nick'
 domain = 'depotdemo.com'
 
-set :rvm_type, :system
-set :rvm_ruby_string, 'ruby-2.3.1'
-
-# set :scm, :none            
-# set :repo_url,  "."
-set :deploy_to, "/home/nick/my/depot"
+set :rvm_type, :user
+set :rvm_ruby_version, '2.3.1'
+       
+set :repo_url,  "git@github.com:nhahoang/depot.git"
+set :deploy_to, "/home/nick/my/deploy/depot"
 
 role :app, domain
 role :web, domain

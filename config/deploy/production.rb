@@ -59,3 +59,5 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+set :default_env, { 'PASSENGER_INSTANCE_REGISTRY_DIR' => '/home/nick/my/deploy/passenger_tmp' }
